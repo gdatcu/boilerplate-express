@@ -5,11 +5,11 @@ let app = express();
 app.use('/', function name(req, res, next) {
   console.log(req.method + " " + req.path + " - " + req.ip);
   next();
+});                                 /* app.get("/:word/echo",function(req, res) {
+  word = req.params.word;
+  res.json({echo: word});
 });
-
-GET /:word/echo. Respond with a JSON object, taking the structure {echo: word}. You can find the word to be repeated at req.params.word.
-
-app.get(':word/echo', function(req, res))
+*/
 
 // Chain middleware to the route "/now"
 app.get('/now', function(req, res, next) {
